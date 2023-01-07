@@ -1,14 +1,10 @@
 
-
-// eslint-disable-next-line react/display-name
-import Navbar from "../components/utils/Navbar";
-import Link from "next/link";
 import {useRouter} from "next/router";
 
-export default function() {
+const Index = () => {
     const router = useRouter();
   return (
-    <div className="min-h-screen font-nunito text-primary px-4 sm:px-12 lg:px-24 grid grid-cols-3  hero">
+    <div className="min-h-screen font-nunito text-primary px-4 sm:px-12 lg:px-24 grid grid-cols-3 hero">
 
         <div className="left flex flex-col justify-center col-span-3 lg:col-span-2">
                     <h1 className="font-federant    text-6xl lg:text-8xl">
@@ -31,3 +27,5 @@ export default function() {
     </div>
   );
 }
+
+export default Index;

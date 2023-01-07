@@ -6,8 +6,8 @@ import axios from "axios";
 import BASE_URL from "../BASE_URL";
 import {authContext} from "../contexts/AuthContextWrapper";
 
-export default function Success(){
 
+const Success = ()=>{
     const [state, setState] = useState('')
     const router = useRouter();
     const auth = useContext(authContext)
@@ -19,7 +19,6 @@ export default function Success(){
     const getSessionData = async ()=>{
         console.log(auth.token)
         console.log(router.query)
-
         try{
 
             const resp =  await axios.post(BASE_URL+'/payment/success', {session_id: router.query.session_id},{headers:{
@@ -47,3 +46,5 @@ export default function Success(){
     );
 }
 
+
+export default Success;

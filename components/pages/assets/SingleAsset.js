@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import usePayment from "../../../hooks/usePayment";
 
-const SingleAsset = ({ asset })=>{
+export default function SingleAsset({ asset }){
     const {cart, addToCart} = useCart(asset)
     const { makePayment } = usePayment()
 
@@ -49,4 +49,3 @@ const SingleAsset = ({ asset })=>{
     )
 }
 
-export  default SingleAsset;
