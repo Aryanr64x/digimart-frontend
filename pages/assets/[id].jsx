@@ -47,7 +47,7 @@ const AssetPage = ({asset}) => {
 }
 
 export async function getStaticPaths() {
-    const resp = await axios.get(BASE_URL+'/assets');
+    const resp = await axios.get(BASE_URL+'/assets', {headers: { "Accept-Encoding": "gzip,deflate,compress" }});
     const assets = resp.data.data;
     return {
         paths: assets.map((asset) => {
@@ -63,7 +63,7 @@ export async function getStaticPaths() {
 
 
 export async function getStaticProps(context) {
-    const resp = await axios.get(BASE_URL+'/assets/'+context.params.id)
+    const resp = await axios.get(BASE_URL+'/assets/'+context.params.id, {headers: { "Accept-Encoding": "gzip,deflate,compress" }})
     const asset = resp.data.data;
     return {
         props: {asset},

@@ -24,7 +24,7 @@ const Assets = ({assets})=>{
 }
 
 export async function getStaticProps(context) {
-    const resp = await axios.get(BASE_URL+'/assets/')
+    const resp = await axios.get(BASE_URL+'/assets/',   {headers: { "Accept-Encoding": "gzip,deflate,compress" }} )
     const assets = resp.data.data;
     return {
         props: {

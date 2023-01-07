@@ -7,6 +7,9 @@ import {useRouter} from "next/router";
 const Checkout = ()=>{
     const router = useRouter();
     const auth = useContext(authContext)
+    const makePayment = ()=>{
+        
+    }
 
     return (
         <div>
