@@ -5,8 +5,8 @@ import Link from "next/link";
 import axios from "axios";
 import BASE_URL from "../BASE_URL";
 import {authContext} from "../contexts/AuthContextWrapper";
-import Test from "../components/Test";
-const Success = ()=>{
+
+export default function Success(){
 
     const [state, setState] = useState('')
     const router = useRouter();
@@ -47,4 +47,3 @@ const Success = ()=>{
     );
 }
 
-export default  Success;
