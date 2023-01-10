@@ -5,7 +5,7 @@ import {authContext} from "../contexts/AuthContextWrapper";
 import {useRouter} from "next/router";
 
 const useCart = ()=>{
-    const {cart, setCart} = useContext(cartContext);
+    const {cart, setCart, insertToDatabase} = useContext(cartContext);
     const notify = () => toast("Item Added To Cart 😀!");
     const notifyFailure = ()=>toast("Cannot Add Multiple Assets of the same type")
     const auth = useContext(authContext)
@@ -17,6 +17,7 @@ const useCart = ()=>{
            if(cart.has(asset)){
                notifyFailure()
            }else{
+               insertToDatabase(asset)
                setCart((cart)=>{
                    return cart.add(asset)
                })

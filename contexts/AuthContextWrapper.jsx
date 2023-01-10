@@ -14,6 +14,7 @@ const AuthContextWrapper = ({children})=> {
 
         setToken(localStorage.getItem('token'))
         setAuthUser(JSON.parse(localStorage.getItem('user')))
+        
     },[])
 
 
