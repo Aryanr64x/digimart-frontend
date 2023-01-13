@@ -1,5 +1,6 @@
 import axios from "axios";
 import BASE_URL from "../../BASE_URL";
+import Reviews from "../../components/pages/assets/Reviews";
 import Navbar from "../../components/utils/Navbar";
 import useCart from "../../hooks/useCart.";
 import usePayment from "../../hooks/usePayment";
@@ -13,11 +14,10 @@ const AssetPage = ({asset}) => {
     return (
         <div>
             <Navbar />
-            <div className="h-screen grid grid-cols-1 lg:grid-cols-2 px-4  overflow-y-scroll mt-8 lg:mt-0" onScroll={(e)=>{
-            }}>
+            <div className="h-screen grid grid-cols-1 lg:grid-cols-2 px-4  overflow-y-scroll mt-8 lg:mt-0" >
                     <div className="  ">
 
-                        <img className={"shadow-black shadow-sm rounded-sm sticky top-32"} src="https://venngage-wordpress.s3.amazonaws.com/uploads/2019/06/eBook-BP-Header.jpg" alt="Display Image of the Asset"/>
+                        <img className={"shadow-black shadow-sm rounded-sm sticky top-32"} src={asset.dp} alt="Display Image of the Asset"/>
 
                     </div>
                     <div className=" flex flex-col items-start pl-8 pt-12  " >
@@ -41,6 +41,7 @@ const AssetPage = ({asset}) => {
                         </div>
                     </div>
             </div>
+            <Reviews reviews={asset.reviews}   asset = {asset} />
 
         </div>
     );

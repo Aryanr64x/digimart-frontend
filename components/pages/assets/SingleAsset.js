@@ -12,7 +12,7 @@ export default function SingleAsset({ asset }){
 
     return (
         <div className=" flex flex-col shadow-primary shadow-sm rounded pb-4 hover:scale-105 transition-all duration-400">
-            <img className="w-full h-48" src="https://venngage-wordpress.s3.amazonaws.com/uploads/2019/06/eBook-BP-Header.jpg" alt="Display Image of the Asset"/>
+            <img className="w-full h-48" src={asset.dp} alt="Display Image of the Asset"/>
 
             <div className="mt-4 grow px-2 flex flex-col justify-between">
                <div>

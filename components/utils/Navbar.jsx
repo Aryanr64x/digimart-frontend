@@ -19,7 +19,7 @@ const Navbar = ()=>{
     return (
         <div className="bg-primary relative  text-secondary  flex justify-between  px-4 sm:px-12 lg:px-32 py-3">
             <Link href={'/assets'} className="text-3xl font-federant">
-                digimart.
+                digidukaan.
             </Link>
           <div className={"w-full lg:w-auto left-0 bg-primary pb-6 lg:pb-0 z-50 top-full   lg:flex items-center menu "+((expand) ? "absolute" : "hidden")}>
               {

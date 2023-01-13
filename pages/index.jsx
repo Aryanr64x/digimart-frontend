@@ -1,18 +1,25 @@
 
 import {useRouter} from "next/router";
-
+import AOS from 'aos';
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Index = () => {
     const router = useRouter();
+    useEffect(()=>{
+        AOS.init({
+          duration: 1000
+        })
+      }, [])
   return (
     <div className="min-h-screen font-nunito text-primary px-4 sm:px-12 lg:px-24 grid grid-cols-3 hero">
 
         <div className="left flex flex-col justify-center col-span-3 lg:col-span-2">
-                    <h1 className="font-federant    text-6xl lg:text-8xl">
+                    <h1 className="font-federant    text-6xl lg:text-8xl" data-aos="fade-right">
                         Buy Digital Assets from all over the country
                     </h1>
 
                     <h2 className="mt-4 text-xl">
-                        At Digimart , India is buying top digital assets from  the most creative people . Don’t stay behind! start browsing the assets now
+                        At Digi Dukaan , India is buying top digital assets from  the most creative people . Don’t stay behind! start browsing the assets now
                     </h2>
 
             <div className="mt-8 text-lg font-bold">
