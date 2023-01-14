@@ -40,7 +40,7 @@ const CartDialog = ({onClose})=>{
 
                                 return (<li className="flex items-center mt-8" key={asset._id}>
                                     <div className="mr-2">
-                                        <img className={ asset.dp } alt="Display Image of the Asset"/>
+                                        <img className="shadow-black w-24 shadow-sm rounded-sm sticky top-32" src={ asset.dp } alt="Display Image of the Asset"/>
                                     </div>
                                     <div className="text-lg font-federant">
                                         {asset.title} <span className="text-primary"> $ {asset.price} </span>
