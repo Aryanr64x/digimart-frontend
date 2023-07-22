@@ -22,7 +22,7 @@ const Reviews = ({  asset })=>{
            
             {
                 reviews.map((review)=>{
-                    return <SingleReview key={review._id} review={review} asset = {asset} />
+                    return <SingleReview key={review.id} review={review} asset = {asset} />
                 })
             }
 

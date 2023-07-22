@@ -17,12 +17,10 @@ const NewReview = ({ asset, onSuccess }) => {
             const body = {
                 rating: rating.current,
                 text: reviewText.current.value,
-                user_id: auth.authUser._id,
-                username: auth.authUser.username
 
             }
             try{
-                const resp = await axios.post(BASE_URL + '/assets/' + asset._id + '/review',body ,{headers: {
+                const resp = await axios.post(BASE_URL + '/assets/' + asset.id + '/review',body ,{headers: {
                     Authorization: "Bearer " + auth.token
                 }})
     

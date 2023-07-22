@@ -4,7 +4,7 @@ const SingleReview = ({ review }) => {
     return (
         <div className="mt-4 bg-slate-50 px-4 py-8">
             <div className="font-bold text-lg">
-                {review.username}
+                {review.user.username}
 
             </div>
 
@@ -20,7 +20,7 @@ const SingleReview = ({ review }) => {
 
             </div>
             <div className="mt-0">
-                {review.text}
+                {review.body}
             </div>
 
         </div>

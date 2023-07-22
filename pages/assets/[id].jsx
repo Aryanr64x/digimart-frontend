@@ -54,7 +54,7 @@ export async function getStaticPaths() {
         paths: assets.map((asset) => {
             return {
                 params:{
-                    id: `${asset._id}`
+                    id: `${asset.id}`
                 }
             }
         }),

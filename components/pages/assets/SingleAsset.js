@@ -16,7 +16,7 @@ export default function SingleAsset({ asset }){
 
             <div className="mt-4 grow px-2 flex flex-col justify-between">
                <div>
-                   <Link href={'/assets/'+asset._id} className="flex justify-between hover:underline">
+                   <Link href={'/assets/'+asset.id} className="flex justify-between hover:underline">
                         <h2 className="text-2xl font-federant">
                             { asset.title }
                         </h2>
