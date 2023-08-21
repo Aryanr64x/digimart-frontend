@@ -29,6 +29,7 @@ const usePayment = ()=>{
                 }})
                router.push(resp.data.url)
            }catch (e){
+                console.log(e)
                notify()
            }
        }
