@@ -8,7 +8,7 @@ const Success = ()=>{
     return (
         <div className="">
 
-                <Navbar />
+            <Navbar />
             <div className="min-h-screen flex flex-col justify-center items-center  px-24">
              <div className="text-3xl">
                  Thanks for buying tha digital asset. You asset can be accessed from the link sent to your mail!
